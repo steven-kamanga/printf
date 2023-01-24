@@ -1,13 +1,10 @@
 #include "main.h"
 
 /**
- * print_hex - prints a number in hexadecimal base,
- * in lowercase
+ * print_hex - converts and prints input number in hexadecimal, lowercase
  * @l: va_list arguments from _printf
- * @f: pointer to the struct flags that determines
- * if a flag is passed to _printf
- * Description: the function calls convert() which in turns converts the input
- * number into the correct base and returns it as a string
+ * @f: pointer to the struct flags that determines if a flag is passed to _printf
+ * Description: calls convert() to convert input number to hexadecimal string
  * Return: the number of char printed
  */
 int print_hex(va_list l, flags_t *f)
@@ -23,15 +20,13 @@ int print_hex(va_list l, flags_t *f)
 }
 
 /**
- * print_hex_big - prints a number in hexadecimal base,
- * in uppercase
+ * print_hex_big - converts and prints input number in uppercase hexadecimal
  * @l: va_list arguments from _printf
- * @f: pointer to the struct that determines
- * if a flag is passed to _printf
- * Description: the function calls convert() which in turns converts the input
- * number into the correct base and returns it as a string
+ * @f: pointer to the struct flags that determines if a flag is passed to _printf
+ * Description: calls convert() to convert input number to uppercase hexadecimal string
  * Return: the number of char printed
- */
+*/
+
 int print_hex_big(va_list l, flags_t *f)
 {
 	unsigned int num = va_arg(l, unsigned int);
@@ -45,12 +40,10 @@ int print_hex_big(va_list l, flags_t *f)
 }
 
 /**
- * print_binary - prints a number in base 2
+ * print_binary - converts and prints input number in base 2
  * @l: va_list arguments from _printf
- * @f: pointer to the struct that determines
- * if a flag is passed to _printf
- * Description: the function calls convert() which in turns converts the input
- * number into the correct base and returns it as a string
+ * @f: pointer to the struct flags that determines if a flag is passed to _printf
+ * Description: calls convert() to convert input number to binary string
  * Return: the number of char printed
  */
 int print_binary(va_list l, flags_t *f)
@@ -63,12 +56,10 @@ int print_binary(va_list l, flags_t *f)
 }
 
 /**
- * print_octal - prints a number in base 8
+ * print_octal - converts and prints input number in base 8
  * @l: va_list arguments from _printf
- * @f: pointer to the struct that determines
- * if a flag is passed to _printf
- * Description: the function calls convert() which in turns converts the input
- * number into the correct base and returns it as a string
+ * @f: pointer to the struct flags that determines if a flag is passed to _printf
+ * Description: calls convert() to convert input number to octal string
  * Return: the number of char printed
  */
 int print_octal(va_list l, flags_t *f)

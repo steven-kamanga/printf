@@ -1,87 +1,67 @@
 .TH _printf 1 "April 16, 2022" "version 1.0" "_printf man page"
+
 .SH NAME
+
 _printf - format and print data
+
 .SH SYNOPSIS
+
 #include <unistd.h> <stdarg.h> <stdlib.h> "main.h"
 
-int printf(const char *format, ...);
+int _printf(const char *format, ...);
 
 .SH DESCRIPTION
-function that produces output according to a format.  Writes the output under the control of a format string that specifies how subsequent arguments (or arguments accessed via the variable-length argument facilities of stdarg(3)) are converted for output.  Execute according to option:
 
-.I
-.SS CONVERSION SPECIFIERS:
-.RS
+_printf is a function that produces output according to a format specified in the format string. The format string controls how subsequent arguments are converted for output. The function supports the following conversion specifiers:
 
-A character that specifies the type of conversion to be applied. The conversion specifiers and their meanings are:
+.IP
+d and i: decimal signed integer
 
-.IP d,i
-Decimal signed integer. The int argument is converted to signed decimal notation. 
+c: character
 
-.IP c
-Character. The int argument is converted to an unsigned char, and the resulting character is written.
+s: string
 
-.IP s
-The const char * argument is expected to be a pointer to an array of character type (pointer to a string). Characters from the array are written up to (but not including) a terminating null byte ('\0').
+o, u, x, and X: unsigned octal, decimal, and hexadecimal notation
 
-.IP o,u,x,X
-The unsigned int argument is converted to unsigned octal (o), unsigned decimal (u), or unsigned hexadecimal (x and X) notation. The letters abcdef are used for x conversions; the letters ABCDEF are used for X conversions.
+p: void pointer in hexadecimal notation
 
-.IP p
-The void * pointer argument is printed in hexadecimal (as if by %#x or %#lx).
+b: binary notation
 
-.I
-.SS CUSTOM CONVERSION SPECIFIERS
-.RS
+r: reverse order string
 
-.IP b
-Decimal signed integer. The int argument is converted to binary notation.
-
-.IP r
-The const char * argument is expected to be a pointer to an array of character type (pointer to a string). Characters from the array are written up to (but n\ot including) a terminating null byte ('\0') in reverse order.
-
-
-.IP R
-The const char * argument is expected to be a pointer to an array of character type (pointer to a string). Characters from the array are written up to (but n\
-\ot including) a terminating null byte ('\0') in ROT13 format.
-
+R: ROT13 encoded string
 
 .SH RETURN VALUE
-.RS
-Upon successful return, these functions return the number of characters printed (excluding the null byte used to end output to strings).
 
-If an output error is encountered, a negative value (-1) is returned.
+Upon successful return, _printf returns the number of characters printed (excluding the null byte used to end output to strings). If an output error is encountered, a negative value (-1) is returned.
 
+.SH EXAMPLES
 
-.SH EXAMPLES:
-.RS
-.SS --------------
-.I
-.SS Character[%c]:
-.RS
-.SS --------------
-.SS Input         _printf("This is a char: [%c]", 'C');
-.SS Output	   This is a char: [C]
-.SS --------------
-.I
-.SS Literal String:
-.RS
-.SS --------------
-.SS Input	 _printf("Let's try to printf a simple sentence");
-.SS Output	  Let's try to printf a simple sentence
-.SS --------------
-.I
-.SS Integers[%i]:
-.RS
-.SS --------------
-.SS Input	 _printf("This is a number: [%i]", 20);
-.SS Output	  This is a number: [20]
-.SS --------------
-.RE
+_printf("This is a char: [%c]", 'C'); // Output: This is a char: [C]
+
+_printf("Let's try to printf a simple sentence"); // Output: Let's try to printf a simple sentence
+
+_printf("This is a number: [%i]", 20); // Output: This is a number: [20]
 
 .SH SEE ALSO
-.I printf(3)
+
+printf(3)
+
 .SH BUGS
-Report _printf Elizabeth Salako (waleade602@gmail.com), Kouam Franck Joel Gaetan (kouamfranck96@gmail.com)
+
+Report _printf Steven Kamanga (kamangasteven00@gmail.com), Osagie OSAGIE
+
 .SH AUTHORS
-ELizabeth Salako and Kouam Franck Joel Gaetan, ALX Cohort 5.
+
+Steven Kamanga and Osagie OSAGIE.
+
+.SH COPYRIGHT
+
+Copyright (C) 2022 Steven Kamanga and Osagie OSAGIE
+
+This is free software; see the source for copying conditions. There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+.SH AVAILABILITY
+
+The _printf command is part of the _printf library. It is available on all systems that support _printf.
