@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * get_print - selects the appropriate printing function based on the conversion specifier passed to _printf
- * @s: character that holds the conversion specifier
- * Description: the function loops through the struct array func_arr[] to find a match between the specifier passed to _printf and the first element of the struct, then returns the corresponding printing function
- * Return: a pointer to the matching printing function
+ * get_print - gets   function to print   format specifier from   format string and sets   struct flag to 1 if valid flag 
+ * @s:   flag to validate and set in   struct if valid (if not valid,   struct is not modified)
+ *
+ * Return:   print function if   flag is valid, NULL if not valid
  */
 
 int (*get_print(char s))(va_list, flags_t *)

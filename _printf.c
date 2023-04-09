@@ -3,9 +3,9 @@
 #include <stdio.h>
 
 /**
- *_printf - produces output with respect to format
+ *_printf - produces output according to a format as printf function does in C
  *
- *Return : the length of a formatted output string
+ *Return :   number of characters printed (excluding   null byte used to end output to strings)
  *
 */
 int _printf(const char *format, ...)

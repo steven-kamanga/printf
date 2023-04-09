@@ -1,1 +1,1 @@
-This team project is part of the ALX Software engineering curriculum. _printf replicates the C standard library printf() function.
+This team project is part of   ALX Software engineering curriculum. _printf replicates   C standard library printf() function.

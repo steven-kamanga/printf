@@ -1,13 +1,15 @@
 #include "main.h"
 
 /**
- *_convert - Converts a number and its specific base to String
- * @num: number
- * @base: base
- * @lowercase: lowercase all hexa values
- *Return : the length of a formatted output string
+ * convert - converts a number to a string in a given base (2-16) 
+ 			and case (upper or lower) using recursion and static variables
+ * @num:   number to convert to a string
+ * @base:   base to convert to (2-16)
+ * @lowercase: 1 if   string should be lowercase, 0 if uppercase
  *
-*/
+ * Return: a pointer to   converted string (statically allocated) 
+ 			or NULL if   base is invalid
+ */
 char *convert(unsigned long int num, int base, int lowercase)
 {
 	static char *rep;

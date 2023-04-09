@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * get_flag - function to turn on a flag when _printf finds a flag specifier
- * @s: character that holds the flag specifier
- * @f: pointer to the struct flags in which we turn the flags on
- * Description: function checks the input character against the possible flag specifiers and sets the corresponding flag in the struct
- * Return: 1 if flag is set, 0 otherwise
-*/
+ * get_flag - gets   flag from   format string and sets   struct flag to 1
+ * @s:   flag to check for validity and set in   struct if valid (if not valid,   struct is not modified)
+ * @f:   struct to set   flag in if valid (if not valid,   struct is not modified) 
+ *
+ * Return: 1 if   flag is valid, 0 if not valid
+ */
 int get_flag(char s, flags_t *f)
 {
 	int i = 0;

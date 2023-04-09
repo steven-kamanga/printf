@@ -12,7 +12,7 @@ int _printf(const char *format, ...);
 
 .SH DESCRIPTION
 
-_printf is a function that produces output according to a format specified in the format string. The format string controls how subsequent arguments are converted for output. The function supports the following conversion specifiers:
+_printf is a function that produces output according to a format specified in   format string.   format string controls how subsequent arguments are converted for output.   function supports   following conversion specifiers:
 
 .IP
 d and i: decimal signed integer
@@ -33,7 +33,7 @@ R: ROT13 encoded string
 
 .SH RETURN VALUE
 
-Upon successful return, _printf returns the number of characters printed (excluding the null byte used to end output to strings). If an output error is encountered, a negative value (-1) is returned.
+Upon successful return, _printf returns   number of characters printed (excluding   null byte used to end output to strings). If an output error is encountered, a negative value (-1) is returned.
 
 .SH EXAMPLES
 
@@ -59,9 +59,9 @@ Steven Kamanga and Osagie OSAGIE.
 
 Copyright (C) 2022 Steven Kamanga and Osagie OSAGIE
 
-This is free software; see the source for copying conditions. There is NO
+This is free software; see   source for copying conditions.  re is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
 .SH AVAILABILITY
 
-The _printf command is part of the _printf library. It is available on all systems that support _printf.
+  _printf command is part of   _printf library. It is available on all systems that support _printf.

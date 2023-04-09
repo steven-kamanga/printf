@@ -6,12 +6,12 @@
 
 /**
  * struct flags - struct containing flags to "turn on" when a flag specifier is passed to _printf()
- * @plus: flag for the '+' character
- * @space: flag for the ' ' character
- * @hash: flag for the '#' character
- * @zero: flag for the '0' character
- * @minus: flag for the '-' character
- * Description: used to handle the flag specifiers in _printf
+ * @plus: flag for   '+' character
+ * @space: flag for   ' ' character
+ * @hash: flag for   '#' character
+ * @zero: flag for   '0' character
+ * @minus: flag for   '-' character
+ * Description: used to handle   flag specifiers in _printf
  */
 typedef struct flags
 {
@@ -21,10 +21,10 @@ typedef struct flags
 } flags_t;
 
 /**
- * struct printHandler - struct to choose the right function depending on the format specifier passed to _printf()
+ * struct printHandler - struct to choose   right function depending on   format specifier passed to _printf()
  * @c: format specifier
- * @f: pointer to the corresponding printing function
- * Description: used to handle the various format specifiers in _printf
+ * @f: pointer to   corresponding printing function
+ * Description: used to handle   various format specifiers in _printf
  */
 typedef struct printHandler
 {
